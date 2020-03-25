@@ -1,0 +1,48 @@
+<section>
+  <mat-card class="example-card">
+      <mat-card-header>
+
+          <mat-card-title>
+              <h1>
+                  AterrizApp
+              </h1>
+          </mat-card-title>
+
+      </mat-card-header>
+
+      <mat-card-content>
+          <form class="example-form"  (keydown.enter)="irARelaciones()">
+              <table class="example-full-width" cellspacing="0">
+                  <tr>
+                      <td>
+                          <mat-form-field class="example-full-width" appearance="outline">
+                              <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+                          </mat-form-field>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <mat-form-field class="example-full-width" appearance="outline">
+                              <input matInput placeholder="Password" [(ngModel)]="password" type="password"
+                                  name="password" required>
+                          </mat-form-field>
+                      </td>
+                  </tr>
+              </table>
+
+              <mat-card-actions>
+                  <button mat-raised-button (click)="irARelaciones()" color="primary">Ingresar</button>
+              </mat-card-actions>
+              
+          </form>
+
+      </mat-card-content>
+
+     
+  </mat-card>
+  <div class="md-form" *ngIf="errorMessage">
+      <div class="alert alert-danger">
+          {{errorMessage}}
+      </div>
+  </div>
+</section>
